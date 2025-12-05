@@ -661,7 +661,7 @@
       try {
         const r = await fetch('https://api-online.theanion.ru/theanionru');
         const d = await r.json();
-        document.getElementById('online').textContent = Number(d.interlude).toLocaleString();
+        document.getElementById('online').textContent = Number(d.total).toLocaleString();
       } catch { document.getElementById('online').textContent = '3000+'; }
     }
     updateOnline();
